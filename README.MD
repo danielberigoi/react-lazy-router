@@ -1,7 +1,7 @@
-# React Router Lazy
+# React Lazy Router
 
 ## Summary
-Provides the ability lazy-load react router components.
+Provides the ability to lazy-load `react router` route components.
 It's a wrapper over `react-router-dom` providing code-splitting capability.
 
 ### Getting started
@@ -10,7 +10,7 @@ It's a wrapper over `react-router-dom` providing code-splitting capability.
 npm install react-lazy-router
 ```
 
-### Example
+### Usage
 
 ```javascript
 import { BrowserRouter, Route, lazy } from "react-lazy-router";

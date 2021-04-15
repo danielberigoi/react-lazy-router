@@ -15,6 +15,8 @@ npm install react-lazy-router
 ```javascript
 import { BrowserRouter, Route, lazy } from "react-lazy-router";
 
+const Home = lazy(import("./components/Home"));
+
 const App = () => {
   return (
     <BrowserRouter>

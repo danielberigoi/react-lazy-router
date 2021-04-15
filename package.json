@@ -1,0 +1,14 @@
+{
+  "name": "react-lazy-router",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "keywords": ["router", "lazy", "async", "code-splitting"],
+  "repository": "danielberigoi/react-lazy-router",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-router-dom": "^5.2.0"
+  }
+}

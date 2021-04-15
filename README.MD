@@ -1,8 +1,8 @@
 # React Router Lazy
 
 ## Summary
-Provides the ability to subscribe React components to defined topics.
-Wrapper over `react-router-dom` providing lazy load (code-splitting) capability
+Provides the ability lazy-load react router components.
+It's a wrapper over `react-router-dom` providing code-splitting capability.
 
 ### Getting started
 
@@ -30,4 +30,4 @@ const App = () => {
 
 - Exports everything from `react-router-dom`
 - Overwrites the `Route` component by wrapping the original `Route` in `React.Suspense`
-- Exposes a `lazy` method by wrapping the original `React.lazy` method
+- Exposes a `lazy` method by wrapping the default `React.lazy` method

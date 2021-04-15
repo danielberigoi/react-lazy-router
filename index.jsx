@@ -6,7 +6,7 @@ export const lazy = (p) => React.lazy(() => p);
 export const Route = ({ fallback = null, ...routeProps }) => (
   <React.Suspense fallback={fallback}>
     <RRoute {...routeProps} />
-    </React.Suspense>
+  </React.Suspense>
 );
 
 export * from "react-router-dom";

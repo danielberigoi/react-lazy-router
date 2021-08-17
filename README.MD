@@ -13,9 +13,10 @@ npm install react-lazy-router
 ### Usage
 
 ```javascript
+import React from "react";
 import { BrowserRouter, Route, lazy } from "react-lazy-router";
 
-const Home = lazy(import("./components/Home"));
+const Home = React.lazy(() => import("./components/Homeo"))
 
 const App = () => {
   return (
@@ -28,6 +29,5 @@ const App = () => {
 
 ### How it works
 
-- Exports everything from `react-router-dom`
+- Exports everything from `react-router-dom` by default
 - Overwrites the `Route` component by wrapping the original `Route` in `React.Suspense`
-- Exposes a `lazy` method by wrapping the default `React.lazy` method

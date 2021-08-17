@@ -14,20 +14,33 @@ npm install react-lazy-router
 
 ```javascript
 import React from "react";
-import { BrowserRouter, Route, lazy } from "react-lazy-router";
+import { BrowserRouter, Route, Switch, Link } from "react-lazy-router";
 
-const Home = React.lazy(() => import("./components/Homeo"))
+const Home = React.lazy(() => import("./Home"));
+const Hello = React.lazy(() => import("./Hello"));
+
+const Loading = <p>Loading...</p>;
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/home" component={Home} fallback={<p>Loading...</p>} />
+      <Link to="/">Home</Link> <Link to="/hello">Hello</Link>
+      <Switch>
+        <Route path="/" component={Home} fallback={Loading} exact />
+        <Route path="/hello" fallback={Loading} exact>
+          <Hello name="there" />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 };
+
 ```
 
 ### How it works
 
 - Exports everything from `react-router-dom` by default
 - Overwrites the `Route` component by wrapping the original `Route` in `React.Suspense`
+
+### Sandbox
+- https://codesandbox.io/s/react-lazy-router-wv65f
